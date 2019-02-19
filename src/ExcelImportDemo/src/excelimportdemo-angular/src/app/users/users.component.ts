@@ -10,6 +10,7 @@ import {
 } from '@shared/service-proxies/service-proxies';
 import { CreateUserComponent } from '@app/users/create-user/create-user.component';
 import { EditUserComponent } from '@app/users/edit-user/edit-user.component';
+import { ExcelImportComponent } from '@appshared/components/excel-import/excel-import.component';
 
 @Component({
   selector: 'app-users',
@@ -73,5 +74,13 @@ export class UsersComponent extends PagedListingComponentBase<UserDto> {
           this.refresh();
         }
       });
+  }
+
+  importExcel() {
+    this.modalHelper.static(ExcelImportComponent, { importType: 1 }).subscribe((res) => {
+      if (res) {
+        this.refresh();
+      }
+    });
   }
 }

@@ -10,12 +10,15 @@
     <button nz-button (click)="create()" nzShape="circle" nzType="primary">
       <i class="anticon anticon-plus"></i>
     </button>
+    <button nz-button (click)="importExcel()" nzShape="circle">
+      <i class="anticon anticon-upload"></i>
+    </button>
   </ng-template>
 
 
   <nz-table #ajaxTable nzShowSizeChanger [nzData]="dataList" [nzTotal]="totalItems" [(nzPageIndex)]="pageNumber"
-    [(nzPageSize)]="pageSize" [nzLoading]="isTableLoading" (nzPageIndexChange)="refresh()" (nzPageSizeChange)="refresh()"
-    [nzFrontPagination]="false">
+    [(nzPageSize)]="pageSize" [nzLoading]="isTableLoading" (nzPageIndexChange)="refresh()"
+    (nzPageSizeChange)="refresh()" [nzFrontPagination]="false">
     <thead>
       <tr>
         <th>{{l("UserName")}}</th>

@@ -10,6 +10,7 @@ import {
 } from '@shared/service-proxies/service-proxies';
 import { EditRoleComponent } from '@app/roles/edit-role/edit-role.component';
 import { CreateRoleComponent } from '@app/roles/create-role/create-role.component';
+import { ExcelImportComponent } from '@appshared/components/excel-import/excel-import.component';
 
 @Component({
   selector: 'app-roles',
@@ -73,6 +74,15 @@ export class RolesComponent extends PagedListingComponentBase<RoleDto> {
       })
       .subscribe(isSave => {
         if (isSave) {
+          this.refresh();
+        }
+      });
+  }
+
+  importExcel() {
+    this.modalHelper.static(ExcelImportComponent, { importType: 2 })
+      .subscribe((res) => {
+        if (res) {
           this.refresh();
         }
       });
