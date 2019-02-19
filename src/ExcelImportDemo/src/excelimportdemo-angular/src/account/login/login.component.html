@@ -1,0 +1,82 @@
+<div [@routerTransition]>
+  <nz-spin [nzTip]="l('LogIningWithThreeDot')" [nzSpinning]="submitting">
+    <nz-card [nzTitle]="nzTitle" nzHoverable='true'>
+      <ng-template #nzTitle>
+        <div class="text-center yoyo__block">
+          <i class="anticon anticon-login"></i>
+          <span>{{l('LogIn')}}</span>
+        </div>
+      </ng-template>
+      <form nz-form #loginForm="ngForm" role="form" novalidate (ngSubmit)="login()" method="post" class="login-form">
+        <br>
+        <!-- 账号 -->
+        <nz-form-item>
+          <nz-form-control>
+            <nz-input-group nzPrefixIcon="anticon anticon-user">
+              <input nz-input name="userNameOrEmailAddress" #userNameOrEmailAddressInput="ngModel" [(ngModel)]="loginService.authenticateModel.userNameOrEmailAddress"
+                [placeholder]="l('UserNameOrEmail')" required maxlength="255">
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- 密码 -->
+        <nz-form-item>
+          <nz-form-control>
+            <nz-input-group nzPrefixIcon="anticon anticon-lock">
+              <input nz-input name="password" #passwordInput="ngModel" [(ngModel)]="loginService.authenticateModel.password"
+                [placeholder]="l('Password')" type="password" required maxlength="32">
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- 记住我 -->
+
+        <nz-form-item>
+          <nz-col [nzSpan]="12">
+
+            <label nz-checkbox [(ngModel)]="loginService.rememberMe" name="rememberMe" id="rememberme">
+              <span>{{l("RememberMe")}}</span>
+            </label>
+          </nz-col>
+
+          <!-- //todo:忘记密码 等待有缘人帮我们完善吧-->
+          <!-- <nz-col [nzSpan]="12" class="text-right">
+            <a routerLink="/account/forgot-password" class="forgot forget-password">{{l("ForgotPassword")}}</a>
+          </nz-col> -->
+
+        </nz-form-item>
+
+        <!-- 登陆按钮 -->
+
+        <button nz-button [nzType]="'primary'" [nzLoading]="submitting" class="yoyo__block" [disabled]="!loginForm.form.valid||submitting">
+          <i class="anticon anticon-login"></i>
+          <span>{{l("LogIn")}}</span>
+        </button>
+
+      </form>
+
+      <div class="login-action-items">
+        <div class="links">
+          <!-- 用户注册 -->
+          <br>
+          <span *ngIf="isSelfRegistrationAllowed">
+            <a routerLink="/account/register">{{l("CreateAnAccount")}}</a>
+            <nz-divider nzType="vertical"></nz-divider>
+          </span>
+          <!-- 租户注册 -->
+          <span *ngIf="!appSession.tenantId">
+            <a routerLink="/account/tenant-register">{{l("TenantRegister")}}</a>
+            <nz-divider nzType="vertical"></nz-divider>
+          </span>
+
+          <!-- //todo:邮件激活 等待有缘人帮我们完善吧 -->
+          <!-- <span>
+            <a routerLink="/account/email-activation">{{l("EmailActivation")}}</a>
+          </span> -->
+        </div>
+      </div>
+
+
+    </nz-card>
+  </nz-spin>
+</div>

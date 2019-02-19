@@ -1,0 +1,9 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# IDEs and editors
+.vs/
+obj/
+bin/
+excelimportdemo-aspnet-core/src/ExcelImportDemo.Web.Host/App_Data/Logs/
+excelimportdemo-aspnet-core/src/ExcelImportDemo.Web.Mvc/App_Data/Logs/
+excelimportdemo-aspnet-core/src/ExcelImportDemo.Migrator/Logs/Logs.txt

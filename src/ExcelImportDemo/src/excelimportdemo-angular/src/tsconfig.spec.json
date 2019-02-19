@@ -1,0 +1,32 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/spec",
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "paths": {
+      "@abp/*": [ "../node_modules/abp-ng2-module/dist/src/*" ],  
+      "@abp": [ "../node_modules/abp-ng2-module/dist/src" ],
+      "@appshared": ["app/shared"],
+      "@appshared/*": ["app/shared/*"],
+      "@testing": ["testing"],
+      "@testing/*": ["testing/*"],
+      "@env": ["environments"],
+      "@env/*": ["environments/*"],
+      "@app/*": ["./app/*"],
+      "@shared": ["shared"],
+      "@shared/*": ["shared/*"],
+    },
+    "baseUrl": "./"
+  },
+  "files": [
+    "test.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
+  ]
+}
