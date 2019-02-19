@@ -18,6 +18,8 @@ import { EditRoleComponent } from '@app/roles/edit-role/edit-role.component';
 import { CreateUserComponent } from '@app/users/create-user/create-user.component';
 import { EditUserComponent } from '@app/users/edit-user/edit-user.component';
 import { AdvertisingComponent } from './advertising/advertising.component';
+import { ExcelImportComponent } from '@appshared/components/excel-import/excel-import.component';
+
 
 @NgModule({
   imports: [
@@ -42,6 +44,8 @@ import { AdvertisingComponent } from './advertising/advertising.component';
     CreateUserComponent,
     EditUserComponent,
     AdvertisingComponent,
+    // 导入Excel文件的组件
+    ExcelImportComponent,
   ],
   entryComponents: [
     CreateTenantComponent,
@@ -51,7 +55,8 @@ import { AdvertisingComponent } from './advertising/advertising.component';
     CreateUserComponent,
     EditUserComponent,
     AdvertisingComponent,
-  ],
-  // providers: [LocalizationService, MenuService],
+    // 上传Excel文件的组件
+    ExcelImportComponent,
+  ]
 })
 export class AppModule { }

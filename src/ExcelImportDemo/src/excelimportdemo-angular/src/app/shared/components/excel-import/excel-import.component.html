@@ -1,0 +1,32 @@
+<form nz-form #validateForm="ngForm" nzLayout="horizontal" autocomplete="off">
+  <!-- 模态框头部 -->
+  <div class="modal-header">
+    <div class="modal-title">
+      <i class="anticon anticon-medicine-box mr-sm"></i>
+      <span>{{l('导入数据')}}</span>
+    </div>
+  </div>
+  <!-- 模态框内容 -->
+  <fieldset>
+
+    <nz-upload [(nzFileList)]="fileList" [nzBeforeUpload]="beforeUpload" [nzAccept]="accept"
+      [nzShowButton]="fileList.length < 1">
+      <button nz-button>
+        <i class="anticon anticon-upload"></i>
+        <span>{{l('选择文件')}}</span>
+      </button>
+    </nz-upload>
+  </fieldset>
+
+  <!-- 模态框底部 -->
+  <div class="modal-footer">
+    <button nz-button type="button" [disabled]="!validateForm.form.valid|| saving" [nzLoading]="uploading"
+      (click)="close()">
+      <i class="anticon anticon-close" *ngIf="!uploading"></i>{{l("取消")}}
+    </button>
+    <button nz-button [nzType]="'primary'" type="button" [disabled]="!validateForm.form.valid|| saving"
+      [nzLoading]="uploading" (click)="save()">
+      <i class="anticon anticon-upload" *ngIf="!uploading"></i>{{l("提交")}}
+    </button>
+  </div>
+</form>
