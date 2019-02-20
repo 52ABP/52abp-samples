@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@abp/*": [ "../node_modules/abp-ng2-module/dist/src/*" ],
+      "@appshared/*": ["app/shared/*"],
+      "@testing": ["testing"],
+      "@testing/*": ["testing/*"],
+      "@env": ["environments"],
+      "@env/*": ["environments/*"],
+      "@shared/*": ["shared/*"],
+      "@app/*": ["./app/*"],
+      "@layout/*":["./layout/*"]
+    },
+    "baseUrl": "./"
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}
