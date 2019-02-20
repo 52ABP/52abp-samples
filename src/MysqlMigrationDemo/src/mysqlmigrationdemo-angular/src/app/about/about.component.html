@@ -1,0 +1,195 @@
+<page-header [title]="'关于本52ABP框架模板'"></page-header>
+
+
+
+<nz-row nzGutter="16">
+  <nz-col nzSpan="8">
+    <nz-card nzTitle="52ABP框架总体介绍" [nzBordered]="false" [nzExtra]="extraTpl">
+      <ng-template #extraTpl>
+        <a href="http://www.52abp.com "> More</a>
+      </ng-template>
+
+      <p> 52ABP是一个整合了前后端的强力框架，
+        后端是对.NET Core和ABP框架进行了二次的封装和整合
+        前端是在Angular的基础上整合了Ng-Zorro、Ng-alain等组件
+        架构层面也是一个基于DDD(领域驱动设计)的经典分层架构 目的是成为一个强大的基础设施符合国人开发习惯的框架现代WEB应用框架。</p>
+
+    </nz-card>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <nz-card nzTitle="什么是ASP.NET Boilerplate ?" [nzBordered]="false" [nzExtra]="extraTpl">
+      <ng-template #extraTpl>
+        <a href="http://www.aspnetboilerplate.com "> More</a>
+      </ng-template>
+      <p>ABP是“ASP.NET Boilerplate Project (ASP.NET样板项目)”的简称。 ASP.NET
+        Boilerplate是一个用最佳实践和流行技术开发现代WEB应用程序的新起点，它旨在成为一个通用的WEB应用程序基础框架和项目模板。
+        ASP.NET Boilerplate 基于DDD的经典分层架构思想，实现了众多DDD的概念（但没有实现所有DDD的概念）。 ABP的官方网站：http://www.aspnetboilerplate.com
+        ABP在Github上的开源项目：https://github.com/aspnetboilerplate
+      </p>
+    </nz-card>
+  </nz-col>
+  <nz-col nzSpan="8">
+    <nz-card nzTitle="什么是Ng Alain    ?" [nzBordered]="false">
+
+      <p>一个基于 Antd 中后台前端解决方案，提供更多通用性业务模块，让开发者更加专注于业务。
+
+      </p>
+
+
+
+    </nz-card>
+
+  </nz-col>
+
+
+</nz-row>
+
+<nz-row nzGutter="16">
+
+  <nz-col nzSpan="8">
+    <nz-card nzTitle="源代码地址" [nzBordered]="false">
+
+      <p>此模板是在Github上开源的。您可以为模板做出贡献。
+        <a href="https://github.com/52ABP/LTMCompanyNameFree.MysqlMigrationDemo" target="_blank">https://github.com/52ABP/LTMCompanyNameFree.MysqlMigrationDemo</a>
+      </p>
+
+      <p>如果您不熟悉ABP框架，可以看看我录制的公开课视频：
+        <a href="https://ke.qq.com/course/287301">https://ke.qq.com/course/287301</a>
+      </p>
+      <p>当然我们也出了收费视频，：<a href="https://dwz.cn/kQydQrTe" target="_blank"> <label>【推荐收费课程】52abp框架asp.net
+            core & Angular全栈开发实战视频课程</label>
+        </a></p>
+
+    </nz-card>
+
+  </nz-col>
+
+
+
+
+
+  <nz-col nzSpan="8">
+    <nz-card nzTitle="视频课程地址" [nzBordered]="false">
+
+      <p>当然我们也出了收费视频，这个也是我们推荐您食用的课程：<a href="https://dwz.cn/kQydQrTe" target="_blank"> <label>【推荐收费课程】52abp框架asp.net
+            core & Angular全栈开发实战视频课程</label>
+        </a></p>
+      <p>
+        更多课程内容：
+        <a href="http://52abp.ke.qq.com/">http://52abp.ke.qq.com/</a>
+        也可以关注微信公众号
+        <img class="img" src=" https://upload-images.jianshu.io/upload_images/1979022-2423bdd34bb9dfab?imageMogr2/auto-orient/strip%7CimageView2/2/w/600"
+          width="450px" height="450px">
+
+
+      </p>
+
+    </nz-card>
+
+  </nz-col>
+</nz-row>
+
+
+<!--
+
+<div class=" clearfix">
+
+
+<div class="block-header">
+  <h2>
+    About This Template
+  </h2>
+</div>
+
+
+
+<div class="row clearfix">
+  <div class="body">
+    <p>
+      This is a simple startup template based on ASP.NET Boilerplate framework and Module Zero. If you need an enterprise startup
+      project, check
+      <a href="http://aspnetzero.com?ref=abptmpl" target="_blank">ASP.NET ZERO</a>.
+    </p>
+
+    <h3>What is ASP.NET Boilerplate?</h3>
+
+    <p>
+      ASP.NET Boilerplate is an application framework built on latest
+      <strong>ASP.NET Core</strong> framework. It makes easy to use authorization, dependency injection, validation, exception handling,
+      localization, logging, caching, background jobs and so on. It's built on already familiar tools like Entity Framework,
+      AutoMapper, Castle Windsor...
+    </p>
+
+    <p>
+      ASP.NET Boilerplate implements
+      <strong>NLayer architecture</strong> (Domain, Application, Infrastructure and Presentation Layers) and
+      <strong>Domain Driven Design</strong> (Entities, Repositories, Domain/Application Services, DTO's...). Also implements and
+      provides a good infrastructure to implement common software development
+      <strong>best practices</strong>.
+    </p>
+
+    <h3>What is Module Zero?</h3>
+
+    <p>
+      ASP.NET Boilerplate framework is designed to be independent of any database schema and to be as generic as possible. Therefore,
+      It leaves some concepts
+      <strong>abstract</strong> and
+      <strong>optional</strong> (like audit logging, permission and setting stores) which requires some
+      <strong>data store</strong>.
+    </p>
+    <p>
+      <strong>Module Zero </strong>implements all fundamental concepts of ASP.NET Boilerplate framework such as
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Tenant-Management">tenant management</a> (
+      <strong>multi-tenancy</strong>),
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Role-Management">
+        role management
+      </a>,
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/User-Management">user management</a>,
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Authorization">authorization</a> (
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Permission-Management">
+        permission management
+      </a>),
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Setting-Management">setting management</a>,
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Language-Management">
+        language management
+      </a>,
+      <a href="http://www.aspnetboilerplate.com/Pages/Documents/Audit-Logging">audit logging</a>
+      and so on.
+    </p>
+    <p>
+      Module-Zero defines entities and implements
+      <strong>domain logic</strong>
+      (domain layer) and leaves application and presentation layers to you.
+    </p>
+
+    <h4>Based on Microsoft ASP.NET Core Identity</h4>
+
+    <p>
+      Module Zero is based on Microsoft's
+      <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity" target="_blank">ASP.NET Core Identity</a> library. It extends user and role managers and implements user and role stores using generic
+      repositories.
+    </p>
+
+    <h3>Documentation</h3>
+
+    <ul>
+      <li>
+        <a href="https://www.aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular">Documentation for this template</a>
+      </li>
+      <li>
+        <a href="http://www.aspnetboilerplate.com/Pages/Documents">ASP.NET Boilerplate documentation</a>
+      </li>
+    </ul>
+
+    <h3>Source code</h3>
+
+    <p>
+      This template is developed open source on Github. You can contribute to the template.
+      <a href="https://github.com/aspnetboilerplate/module-zero-core-template" target="_blank">https://github.com/aspnetboilerplate/module-zero-core-template</a>
+    </p>
+  </div>
+</div>
+
+
+
+</div> -->
